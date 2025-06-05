@@ -1,137 +1,99 @@
+/* estilos.css */
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: whitesmoke;
-    background-size: cover; /* Hace que la imagen de fondo cubra todo el espacio */
-    background-position: center; /* Centra la imagen de fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    margin: 0;
-    padding: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background: linear-gradient(to right, #e0f7fa, #ffffff);
+	color: #333;
 }
 
-.header {
-    background-color: rgba(46, 125, 50, 0.7); /* Verde con opacidad en el header */
-    color: white;
-    padding: 20px;
-    font-size: 18px;
-    text-align: center;
-    display: flex;
-    flex-direction: column; /* Coloca los elementos en una columna */
-    align-items: center; /* Centra los elementos */
-    position: relative;
-    z-index: 10;
+.hero {
+	background: url('img/background.jpg') no-repeat center center/cover;
+	padding: 80px 0;
+	color: white;
+	text-align: center;
+	text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
 }
 
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-    position: absolute;
-    top: 10px;
-    right: 20px;
+	.hero img {
+		max-width: 80%;
+		margin-bottom: 20px;
+	}
+
+	.hero p.lead {
+		font-size: 1.5rem;
+	}
+
+.card {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	border: none;
+	border-radius: 15px;
+	overflow: hidden;
 }
 
-.navbar li {
-    position: relative;
+	.card:hover {
+		transform: translateY(-10px);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+	}
+
+.card-img-top {
+	height: 230px;
+	object-fit: cover;
 }
 
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px;
+.card-body {
+	background-color: #ffffff;
+	padding: 25px;
 }
 
-.navbar a:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
+.card-title {
+	font-weight: bold;
+	font-size: 1.25rem;
+	color: #2c3e50;
 }
 
-/* Menú desplegable */
-.navbar li:hover > ul {
-    display: block;
+.card-text {
+	font-size: 0.95rem;
+	color: #555;
 }
 
-.navbar ul ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgba(46, 125, 50, 0.8);
-    padding: 10px 0;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+.btn-success {
+	background-color: #27ae60;
+	border: none;
+	border-radius: 25px;
+	padding: 10px 20px;
 }
 
-.navbar ul ul li a {
-    padding: 10px;
-    color: white;
-    text-decoration: none;
+	.btn-success:hover {
+		background-color: #1e8449;
+	}
+
+footer {
+	background-color: #145A32;
+	color: white;
+	padding: 20px 0;
+	text-align: center;
 }
 
-.logo-img {
-    width: 300px;  /* Ajusta el tamaño del logo */
-    height: auto;
-    position: absolute;  /* Esto coloca el logo en una posición fija */
-    top: 20px;  /* Ajusta la distancia desde la parte superior */
-    left: 20px;  /* Ajusta la distancia desde la parte izquierda */
-    z-index: 20;  /* Asegura que el logo esté por encima del contenido */
+.extra-section {
+	background-color: #dff0d8;
+	padding: 40px 0;
 }
 
-.contenedor {
-    max-width: 1500px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+	.extra-section h3 {
+		color: #2c3e50;
+		font-weight: bold;
+	}
+
+	.extra-section p {
+		color: #555;
+	}
+
+.info-section {
+	padding: 60px 0;
+	background-color: #f9f9f9;
 }
 
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.menu-item {
-    position: relative;
-    width: 350px;  /* Ajusta el ancho del contenedor */
-    height: 300px; /* Ajusta la altura del contenedor */
-    overflow: hidden;  /* Previene que las imágenes se salgan del contenedor */
-    border-radius: 10px;
-    cursor: pointer;
-    display: flex;  /* Agrega Flexbox para alinear el contenido */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-}
-
-.menu-item img {
-    width: 100%;  /* Hace que la imagen ocupe todo el ancho del contenedor */
-    height: 100%;  /* Hace que la imagen ocupe toda la altura del contenedor */
-    object-fit: cover; /* Ajusta la imagen sin deformarla */
-    transition: transform 0.3s ease;
-}
-
-.menu-item:hover img {
-    transform: scale(1.1);  /* Aumenta el tamaño de la imagen en hover */
-    filter: blur(4px) brightness(50%);  /* Aplica el filtro en hover */
-}
-
-.menu-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centra el texto dentro del contenedor */
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    font-size: 18px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.menu-item:hover .menu-text {
-    opacity: 1;  /* Muestra el texto al hacer hover */
-}
+	.info-section .icon {
+		font-size: 2.5rem;
+		color: #27ae60;
+	}
