@@ -1,36 +1,63 @@
 body {
-    font-family: "Georgia", serif;
-    background-color: #f4f4f4;
+    background-color: #e8f5e9;
 }
 
 /* Navbar */
 .navbar {
-    background-color: #2ecc71 !important;
+    background-color: #2e7d32 !important;
 }
 
-.navbar-brand img {
-    max-height: 70px; /* Ajusta la altura máxima para que no sobresalga del menú */
-    width: auto; /* Mantén la proporción de la imagen */
+/* Footer */
+footer {
+    background-color: #2ecc71;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
 }
 
+/* Colores de texto */
+.text-green {
+    color: #1b5e20;
 }
 
-.navbar-nav .nav-link {
-    color: white !important;
+/* Estilo para contenedores con efecto zoom */
+.zoom-container {
+    transition: transform 0.3s ease;
+    display: block;
+    text-decoration: none;
 }
 
-.navbar-nav .nav-link:hover {
-    text-decoration: underline;
+.zoom-container:hover {
+    transform: scale(1.1);
 }
+
+.zoom-container img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.zoom-container h3,
+.zoom-container p {
+    color: #1b5e20;
+}
+
+/* Sección de información destacada */
 .info-section {
+    padding: 30px 0;
     background-color: #f1f8e9; /* Verde claro */
     border-top: 4px solid #2e7d32;
     border-bottom: 4px solid #2e7d32;
 }
 
+.info-section .icon {
+    font-size: 2.5rem;
+    color: #27ae60;
+}
+
 .info-section h5 {
     margin-top: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size: 22px;
 }
 
@@ -46,13 +73,4 @@ body {
 
 .icon i:hover {
     transform: scale(3.7);
-}
-
-/* Pie de página */
-footer {
-    background-color: #2ecc71;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 40px;
 }
